@@ -1,0 +1,20 @@
+a=[3,4,1,9,56,7,9,12]
+a.sort
+n=a.length.to_i
+print "enter m value:"
+m=gets.chomp.to_i
+c=Array.new()
+if m==0 or n==0
+    puts 0
+end
+if n<m
+    puts -1
+end
+for i in 0...n-1
+d=n-1
+e=n-m
+g=a[d].to_i.abs
+f=a[e].to_i.abs
+c[i]=(g-f).abs
+end
+puts c.min

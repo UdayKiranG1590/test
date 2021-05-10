@@ -1,0 +1,21 @@
+def primefactors(num)
+    while num%2==0
+    print 2
+    print"*"
+    num=num/2
+    end
+    for i in 3..Math.sqrt(num) do
+    while (num%i==0)
+    print ("#{i}*")
+    num=num/i
+    i=i+2
+    end
+    end
+    if num>2
+        print num
+    end
+end
+print("enter number:")
+num=gets.to_i.abs
+print("prime factors are:")
+primefactors(num)
