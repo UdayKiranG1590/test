@@ -1,20 +1,13 @@
-def findevenodd(num)
-    if num%2!=0
-        puts("#{num} is odd")
-    else
+loop do
+    print("enter the number:")
+    num=gets.to_i
+    if num%2==0
         puts("#{num} is even")
         print("Do you want to enter other number:")
         d=gets.chomp
-        if d=="Y" or d=="y"
-            puts "yes"
-            print "enter number:"
-            num=gets.to_i
-            findevenodd(num)
-        elsif d=="N" or d=="n"
-        puts "no"
-        end
+        break puts "no" if d=="N" or d=="n"
+    else
+        puts("#{num} is odd")
+        break
     end
 end
-print("enter the number:")
-num=gets.to_i
-findevenodd(num)
