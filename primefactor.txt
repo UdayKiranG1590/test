@@ -1,12 +1,14 @@
 def primefactors(num)
     while num%2==0
     print 2
-    print"*"
+    break if num==2
+    print "*"
     num=num/2
     end
     for i in 3..Math.sqrt(num) do
     while (num%i==0)
-    print ("#{i}*")
+    print (i)
+    print "*"
     num=num/i
     i=i+2
     end
