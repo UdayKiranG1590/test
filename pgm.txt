@@ -1,0 +1,16 @@
+a=[1,2,2,3,4,5,8,9,12]
+i=gets.chomp.to_i
+l=0
+n=a.length-1.to_i
+while l<n
+if a[l]+a[n]==i
+    print a[l]
+    print " "
+    p a[n]
+end
+if a[l]+a[n]<i
+    l=l+1
+else
+    n=n-1
+end
+end
